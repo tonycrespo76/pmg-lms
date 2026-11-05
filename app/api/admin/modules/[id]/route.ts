@@ -14,9 +14,10 @@ export async function PUT(request: Request, { params }: { params: { id: string }
   const body = await request.json();
   const result = await db.query(
     `UPDATE pmg_modules SET title=$1, slug=$2, category=$3, description=$4, transcript=$5, audio_url=$6,
-     duration_minutes=$7, position=$8, published=$9, updated_at=NOW() WHERE id=$10 RETURNING *`,
+     duration_minutes=$7, position=$8, published=$9, language=$11, updated_at=NOW() WHERE id=$10 RETURNING *`,
     [body.title, body.slug, body.category, body.description, body.transcript, body.audioUrl,
-      Number(body.durationMinutes), Number(body.position), Boolean(body.published), params.id],
+      Number(body.durationMinutes), Number(body.position), Boolean(body.published), params.id,
+      body.language === "es" ? "es" : "en"],
   );
   if (!result.rows.length) return NextResponse.json({ error: "Module not found." }, { status: 404 });
   return NextResponse.json(result.rows[0]);

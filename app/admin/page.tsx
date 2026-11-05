@@ -7,7 +7,7 @@ import { ArrowLeft, Eye, EyeOff, Mail, Pencil, Plus, Trash2, UserPlus, Users, X 
 
 type Module = {
   id: string; slug: string; title: string; category: string; description: string; transcript: string;
-  audio_url: string; duration_minutes: number; position: number; published: boolean;
+  audio_url: string; duration_minutes: number; position: number; published: boolean; language: string;
 };
 
 type User = {
@@ -17,7 +17,7 @@ type User = {
 
 const emptyModule = {
   slug: "", title: "", category: "General", description: "", transcript: "", audioUrl: "",
-  durationMinutes: 18, position: 0, published: true,
+  durationMinutes: 18, position: 0, published: true, language: "en",
 };
 
 export default function AdminPage() {
@@ -106,7 +106,7 @@ export default function AdminPage() {
     setEditing({
       id: module.id, slug: module.slug, title: module.title, category: module.category,
       description: module.description, transcript: module.transcript, audioUrl: module.audio_url,
-      durationMinutes: module.duration_minutes, position: module.position, published: module.published,
+      durationMinutes: module.duration_minutes, position: module.position, published: module.published, language: module.language || "en",
     });
   }
 
@@ -158,6 +158,7 @@ export default function AdminPage() {
             <div className="editor-grid">
               <label>URL slug<input value={editing.slug} onChange={event => setEditing({ ...editing, slug: event.target.value })} placeholder="auto-generated" /></label>
               <label>Category<input value={editing.category} onChange={event => setEditing({ ...editing, category: event.target.value })} /></label>
+              <label>Language<select value={editing.language} onChange={event => setEditing({ ...editing, language: event.target.value })}><option value="en">English</option><option value="es">Español</option></select></label>
               <label>Duration (minutes)<input type="number" min="1" value={editing.durationMinutes} onChange={event => setEditing({ ...editing, durationMinutes: Number(event.target.value) })} /></label>
               <label>Position<input type="number" value={editing.position} onChange={event => setEditing({ ...editing, position: Number(event.target.value) })} /></label>
             </div>

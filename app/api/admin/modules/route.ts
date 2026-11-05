@@ -22,10 +22,11 @@ export async function POST(request: Request) {
   if (!title) return NextResponse.json({ error: "Title is required." }, { status: 400 });
   const slug = String(body.slug || title).toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const result = await db.query(
-    `INSERT INTO pmg_modules (slug, title, category, description, transcript, audio_url, duration_minutes, position, published)
-     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING *`,
+    `INSERT INTO pmg_modules (slug, title, category, description, transcript, audio_url, duration_minutes, position, published, language)
+     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING *`,
     [slug, title, String(body.category ?? "General").trim(), String(body.description ?? ""), String(body.transcript ?? ""),
-      String(body.audioUrl ?? ""), Number(body.durationMinutes || 18), Number(body.position || 0), Boolean(body.published)],
+      String(body.audioUrl ?? ""), Number(body.durationMinutes || 18), Number(body.position || 0), Boolean(body.published),
+      body.language === "es" ? "es" : "en"],
   );
   return NextResponse.json(result.rows[0], { status: 201 });
 }
