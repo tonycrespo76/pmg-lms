@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Sistemas POS y terminales
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Sistemas POS y terminales.
+
+SCENE 1
+Una terminal de pagos se enfoca en aceptar y procesar pagos. Sus funciones varían según el modelo, la conexión, el software y la configuración del proveedor.
+
+SCENE 2
+Un sistema de punto de venta puede combinar pagos con productos, pedidos, permisos de empleados, reportes, recibos y programas adicionales.
+
+SCENE 3
+Un negocio móvil puede necesitar una solución compacta. Un restaurante con mucho movimiento puede necesitar mesas, órdenes para cocina, varias impresoras y permisos detallados.
+
+SCENE 4
+Confirme red, compatibilidad de equipos, integraciones de pagos, suscripciones y cobertura de soporte antes de prometer una función.
+
+REVIEW
+Pregunta de repaso. ¿Todas las terminales administran restaurantes?. Respuesta: No.

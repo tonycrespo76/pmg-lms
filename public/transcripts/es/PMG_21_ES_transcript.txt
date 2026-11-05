@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Conceptos básicos de seguridad PCI
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Conceptos básicos de seguridad PCI.
+
+SCENE 1
+Use equipos aprobados, canales cifrados, accesos individuales y procesos de pago seguros. Limite el acceso a quienes realmente lo necesiten.
+
+SCENE 2
+PCI DSS prohíbe conservar datos sensibles como códigos de verificación y PIN después de autorizar un pago, incluso cifrados. No los guarde en notas ni capturas.
+
+SCENE 3
+Nunca pida contraseñas, números completos de tarjeta, PIN ni códigos de verificación para diagnosticar un problema. Siga la verificación de identidad y el proceso seguro de escalación.
+
+SCENE 4
+Si cree que se expusieron datos de pago, detenga la actividad insegura y notifique a seguridad o a los contactos autorizados del procesador según el plan de incidentes.
+
+REVIEW
+Pregunta de repaso. ¿Puede un comercio guardar códigos de seguridad después de autorizar?. Respuesta: No.

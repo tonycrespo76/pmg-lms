@@ -8,20 +8,20 @@ import { readSession } from "@/lib/auth";
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  let dbModules: { title: string; category: string; language: string }[] = [];
+  let dbModules: { title: string; category: string; language: string; position: number }[] = [];
   try {
     const session = await readSession();
     const user = session?.sub ? (await db.query("SELECT access_all_modules FROM pmg_users WHERE id=$1 AND active=true", [session.sub])).rows[0] : null;
     const assigned = session?.sub && !user?.access_all_modules
-      ? (await db.query("SELECT m.title, m.category, m.language FROM pmg_modules m JOIN pmg_user_modules um ON um.module_id=m.id WHERE um.user_id=$1 AND m.published=true ORDER BY m.position ASC", [session.sub])).rows
-      : (await db.query("SELECT title, category, language FROM pmg_modules WHERE published = true ORDER BY position ASC, created_at ASC")).rows;
+      ? (await db.query("SELECT m.title, m.category, m.language, m.position FROM pmg_modules m JOIN pmg_user_modules um ON um.module_id=m.id WHERE um.user_id=$1 AND m.published=true ORDER BY m.position ASC", [session.sub])).rows
+      : (await db.query("SELECT title, category, language, position FROM pmg_modules WHERE published = true ORDER BY language ASC, position ASC, created_at ASC")).rows;
     dbModules = assigned;
   } catch {
     // Static course content remains available until PostgreSQL is configured.
   }
   const courseModules = dbModules.length
     ? dbModules
-    : modules.map(([title, category]) => ({ title, category, language: "en" }));
+    : modules.map(([title, category], index) => ({ title, category, language: "en", position: index + 1 }));
   const englishModules = courseModules.filter(module => module.language !== "es");
   const spanishModules = courseModules.filter(module => module.language === "es");
   return (
@@ -76,14 +76,14 @@ export default async function Home() {
 
 function LanguageSection({ title, modules: languageModules }: {
   title: string;
-  modules: { title: string; category: string }[];
+  modules: { title: string; category: string; position: number; language: string }[];
 }) {
   return (
     <section className="language-section">
       <div className="language-heading"><h2>{title}</h2><span>{languageModules.length} modules</span></div>
       <div className="module-grid">
             {languageModules.map((module, index) => (
-              <Link className={`module-card ${index === 0 ? "featured" : ""}`} href={`/modules/${index}`} key={module.title}>
+              <Link className={`module-card ${index === 0 ? "featured" : ""}`} href={`/modules/${module.position - 1}?lang=${module.language}`} key={module.title}>
                 <div className="module-thumb">
                   <span className="module-number">{padModule(index)}</span>
                   <div className="module-icon">{index === 22 ? <Trophy size={26} /> : <Headphones size={26} />}</div>

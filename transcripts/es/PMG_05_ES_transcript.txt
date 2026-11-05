@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Cómo leer un estado de cuenta
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Cómo leer un estado de cuenta.
+
+SCENE 1
+Confirme el período, el local, el volumen de ventas con tarjeta, la cantidad de transacciones, reembolsos, contracargos y cargos totales relacionados con el procesamiento.
+
+SCENE 2
+Divida los cargos pertinentes de procesamiento entre el volumen de ventas con tarjeta y multiplique por cien. Es una referencia general, pero no reemplaza el análisis de cada cargo.
+
+SCENE 3
+Busque cargos mensuales de plataforma, alquiler de equipos, pasarela, cierre de lote, contracargos y mínimos. Algunos cargos no cambian aunque aumente o disminuya el volumen.
+
+SCENE 4
+Use meses equivalentes, incluya los cargos fijos propuestos, identifique los costos de equipos y contrato, y obtenga aprobación antes de prometer ahorros. Nunca solicite números completos de tarjetas ni datos sensibles de clientes.
+
+REVIEW
+Pregunta de repaso. ¿Cómo empieza el cálculo de la tasa efectiva?. Respuesta: Cargos de procesamiento divididos entre volumen de ventas con tarjeta.

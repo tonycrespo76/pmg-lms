@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Rechazos y fallas de terminales
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Rechazos y fallas de terminales.
+
+SCENE 1
+Un rechazo puede deberse al banco emisor o al sistema de pago. Una pantalla congelada, terminal sin conexión o error de red necesita otro procedimiento.
+
+SCENE 2
+Confirme corriente, red, comercio correcto, estado del equipo y errores visibles. Nunca pida al cliente decir en voz alta el número completo de su tarjeta.
+
+SCENE 3
+Antes de repetir un pago dudoso, revise el historial o consulte al procesador. Un error por tiempo de espera no siempre significa que el pago falló.
+
+SCENE 4
+Informe modelo, error exacto, estado de conexión, hora, importe si corresponde y pruebas realizadas. Nunca incluya datos sensibles de autenticación en un ticket.
+
+REVIEW
+Pregunta de repaso. ¿Debe repetir un pago de inmediato tras un tiempo de espera?. Respuesta: No hasta verificar si el pago anterior fue aprobado.

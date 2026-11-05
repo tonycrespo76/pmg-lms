@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Lotes, depósitos y conciliación
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Lotes, depósitos y conciliación.
+
+SCENE 1
+Un lote agrupa transacciones para procesarlas o liquidarlas, según la plataforma. Los cierres automáticos y manuales varían; revise la configuración real.
+
+SCENE 2
+Use historial de transacciones, reportes de lotes, liquidaciones y movimientos bancarios. La fecha de venta, cierre y depósito pueden ser diferentes.
+
+SCENE 3
+Comience con ventas brutas con tarjeta y después considere reembolsos, anulaciones, contracargos, cargos descontados del depósito y diferencias de fechas.
+
+SCENE 4
+Confirme qué transacciones faltan, estado de cuenta, total del lote y referencias del procesador. No garantice una fecha de depósito sin confirmación.
+
+REVIEW
+Pregunta de repaso. ¿Siempre coinciden las fechas de transacción y depósito?. Respuesta: No.

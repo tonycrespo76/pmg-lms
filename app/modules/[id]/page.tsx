@@ -9,11 +9,19 @@ export function generateStaticParams() {
   return modules.map((_, id) => ({ id: String(id) }));
 }
 
-export default async function ModulePage({ params }: { params: { id: string } }) {
+export default async function ModulePage({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams: { lang?: string };
+}) {
   const id = Number(params.id);
   const safeId = Number.isInteger(id) && id >= 0 && id < modules.length ? id : 0;
   const moduleNumber = padModule(safeId);
-  const transcript = await fs.readFile(path.join(process.cwd(), "public", "transcripts", `PMG_${moduleNumber}_EN_transcript.txt`), "utf8");
+  const language = searchParams.lang === "es" ? "es" : "en";
+  const transcriptDirectory = language === "es" ? path.join("public", "transcripts", "es") : path.join("public", "transcripts");
+  const transcript = await fs.readFile(path.join(process.cwd(), transcriptDirectory, `PMG_${moduleNumber}_${language.toUpperCase()}_transcript.txt`), "utf8");
   const lines = transcript.split(/\n\n+/).filter(Boolean);
   const title = modules[safeId][0];
   const lessonLines = lines.slice(2).map((block) => {
@@ -40,7 +48,7 @@ export default async function ModulePage({ params }: { params: { id: string } })
           <span className="course-label">{modules[safeId][1]}</span>
           <h1>{lessonLines[0]?.heading || "Introduction"}</h1>
           <p className="lesson-text">{lessonLines[0]?.content}</p>
-          <audio controls className="audio-player" src={`/audio/pmg_module_${moduleNumber}_01.mp3`} preload="metadata">Your browser does not support audio.</audio>
+          <audio controls className="audio-player" src={`/audio/${language === "es" ? "es/" : ""}pmg_module_${moduleNumber}_01.mp3`} preload="metadata">Your browser does not support audio.</audio>
           <div className="lesson-navigation">
             {safeId > 0 && <Link href={`/modules/${safeId - 1}`} className="secondary-button"><ArrowLeft size={17} /> Previous</Link>}
             {safeId < modules.length - 1 && <Link href={`/modules/${safeId + 1}`} className="primary-button">Next module <ArrowRightIcon /></Link>}

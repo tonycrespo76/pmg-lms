@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Cómo funciona una transacción
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Cómo funciona una transacción.
+
+SCENE 1
+El cliente acerca, inserta, desliza o introduce los datos de la tarjeta. La terminal o el sistema de cobro captura los detalles de manera segura y envía la solicitud de autorización.
+
+SCENE 2
+La solicitud pasa del sistema del comercio al procesador o adquirente, luego a la red de tarjetas y finalmente al banco emisor. El emisor responde aprobando o rechazando la transacción.
+
+SCENE 3
+Una venta aprobada no es lo mismo que un depósito bancario. Las transacciones también pasan por compensación y liquidación, cuando se concilian los registros y se transfieren fondos entre instituciones financieras.
+
+SCENE 4
+El plazo del depósito depende del contrato, los horarios de cierre, los feriados bancarios, las revisiones de riesgo y otros factores. Si falta un depósito, revise el lote, la liquidación y los reportes antes de escalar el caso.
+
+REVIEW
+Pregunta de repaso. ¿Aprobación significa que el comercio ya recibió el dinero?. Respuesta: No. Todavía faltan la liquidación y el depósito.

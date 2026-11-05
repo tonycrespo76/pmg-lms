@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Reembolsos, anulaciones y disputas
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Reembolsos, anulaciones y disputas.
+
+SCENE 1
+Una anulación normalmente cancela una transacción elegible antes de liquidarse. Un reembolso devuelve dinero después. Un contracargo es una disputa gestionada por el sistema de tarjetas.
+
+SCENE 2
+Las opciones, plazos y permisos dependen del procesador y POS. Verifique la transacción original, el importe y la autorización del comercio antes de actuar.
+
+SCENE 3
+Registre motivo, fecha límite, documentos de la transacción y pruebas de entrega o servicio si corresponden. El adquirente proporciona el procedimiento real de respuesta.
+
+SCENE 4
+Explique que una respuesta bien documentada puede ayudar, pero no garantiza el resultado. No comparta datos del cliente en sistemas no autorizados.
+
+REVIEW
+Pregunta de repaso. ¿Un reembolso es igual a un contracargo?. Respuesta: No.

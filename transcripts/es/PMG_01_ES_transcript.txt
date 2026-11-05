@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Introducción a los servicios para comercios
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Introducción a los servicios para comercios.
+
+SCENE 1
+El procesamiento de tarjetas permite que un negocio acepte pagos electrónicos. Participan varias organizaciones: el comercio, su procesador o adquirente, la red de tarjetas y el banco emisor del cliente.
+
+SCENE 2
+Partners Merchant Group ayuda al negocio a evaluar los servicios de procesamiento, los equipos y las necesidades de soporte. Explicamos la solución y coordinamos con los proveedores responsables de aprobación, procesamiento y depósitos.
+
+SCENE 3
+El comercio es el negocio que acepta tarjetas. El titular es el cliente. El emisor proporciona la tarjeta. El adquirente atiende al comercio. El procesador ayuda a transmitir los mensajes y registros de las transacciones.
+
+SCENE 4
+Un buen representante primero escucha. No prometa cero cargos, aprobación garantizada ni un plazo de depósito sin confirmación escrita. Concéntrese en información correcta, precios claros, productos adecuados y soporte después de la venta.
+
+REVIEW
+Pregunta de repaso. ¿Quién emite la tarjeta del cliente?. Respuesta: El banco emisor.

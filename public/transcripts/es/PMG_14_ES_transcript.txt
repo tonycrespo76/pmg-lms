@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Conceptos básicos de Dejavoo
+
+INTRO
+Bienvenidos a la Academia de Capacitación de Partners Merchant Group. Hoy: Conceptos básicos de Dejavoo.
+
+SCENE 1
+Anote el modelo de terminal, equipo de cara al cliente si lo hay, aplicación, tipo de conexión y configuración del procesador. Un procedimiento puede variar entre modelos.
+
+SCENE 2
+En un ambiente de prueba, practique venta, aprobación, recibo, anulación y reembolso. Confirme las funciones disponibles según la cuenta y el proveedor.
+
+SCENE 3
+Revise corriente, cables, red, estado del equipo y mensaje exacto de error. Verifique parámetros y registro con el procesador mediante procedimientos de soporte aprobados.
+
+SCENE 4
+Anote modelo, versión de software si aparece, síntomas y pruebas realizadas. Obtenga una captura segura sin datos de tarjetas y contacte al soporte autorizado.
+
+REVIEW
+Pregunta de repaso. ¿Qué dato del equipo se confirma primero?. Respuesta: El modelo exacto de la terminal.
