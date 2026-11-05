@@ -1,0 +1,40 @@
+CREATE TABLE IF NOT EXISTS pmg_modules (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  slug TEXT UNIQUE,
+  title TEXT NOT NULL,
+  category TEXT NOT NULL DEFAULT 'General',
+  description TEXT NOT NULL DEFAULT '',
+  transcript TEXT NOT NULL DEFAULT '',
+  audio_url TEXT NOT NULL DEFAULT '',
+  duration_minutes INTEGER NOT NULL DEFAULT 18,
+  position INTEGER NOT NULL DEFAULT 0,
+  published BOOLEAN NOT NULL DEFAULT false,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+INSERT INTO pmg_modules (title, slug, category, position, published, description) VALUES
+('Understanding Merchant Services','understanding-merchant-services','Merchant Foundations',1,true,'Build a foundation in merchant services.'),
+('How a Card Transaction Works','how-a-card-transaction-works','Merchant Foundations',2,true,'Follow a payment from authorization to settlement.'),
+('Interchange and Processing Fees','interchange-and-processing-fees','Merchant Foundations',3,true,'Understand interchange and processing costs.'),
+('Pricing Models and Disclosures','pricing-models-and-disclosures','Merchant Foundations',4,true,'Explain common pricing models accurately.'),
+('Reading a Merchant Statement','reading-a-merchant-statement','Merchant Foundations',5,true,'Review statement terms and fees.'),
+('Approaching Business Owners','approaching-business-owners','Sales Essentials',6,true,'Start professional merchant conversations.'),
+('The PMG Sales Pitch','pmg-sales-pitch','Sales Essentials',7,true,'Present the PMG value proposition.'),
+('Discovering Merchant Needs','discovering-merchant-needs','Sales Essentials',8,true,'Ask effective discovery questions.'),
+('Comparing Statements and Proposals','comparing-statements-and-proposals','Sales Essentials',9,true,'Compare proposals with clarity.'),
+('Handling Objections','handling-objections','Sales Essentials',10,true,'Respond to common sales objections.'),
+('Closing and Submitting an Application','closing-and-submitting-an-application','Sales Essentials',11,true,'Move from agreement to application.'),
+('POS Systems Versus Terminals','pos-systems-versus-terminals','Products & Solutions',12,true,'Match businesses to payment technology.'),
+('Clover Restaurant Solutions','clover-restaurant-solutions','Products & Solutions',13,true,'Explore Clover restaurant capabilities.'),
+('Dejavoo Terminal Basics','dejavoo-terminal-basics','Products & Solutions',14,true,'Learn essential Dejavoo operations.'),
+('Matching Equipment to Merchants','matching-equipment-to-merchants','Products & Solutions',15,true,'Recommend equipment based on needs.'),
+('Merchant Onboarding and Activation','merchant-onboarding-and-activation','Operations',16,true,'Guide merchants through activation.'),
+('Batches, Deposits and Reconciliation','batches-deposits-and-reconciliation','Operations',17,true,'Understand settlement and reconciliation.'),
+('Declines and Terminal Troubleshooting','declines-and-terminal-troubleshooting','Operations',18,true,'Resolve common payment issues.'),
+('Refunds, Voids and Disputes','refunds-voids-and-disputes','Operations',19,true,'Handle transaction exceptions correctly.'),
+('Merchant Service and Retention','merchant-service-and-retention','Operations',20,true,'Protect long-term merchant relationships.'),
+('PCI Data Security Basics','pci-data-security-basics','Compliance & Ethics',21,true,'Apply essential payment security practices.'),
+('Card Rules and Ethical Selling','card-rules-and-ethical-selling','Compliance & Ethics',22,true,'Sell accurately and ethically.'),
+('Final PMG Skills Assessment','final-pmg-skills-assessment','Compliance & Ethics',23,true,'Confirm readiness across the training path.')
+ON CONFLICT (slug) DO NOTHING;

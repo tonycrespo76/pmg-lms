@@ -1,9 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen, Clock3, Headphones, Play, Trophy } from "lucide-react";
+import { ArrowRight, BookOpen, Clock3, Headphones, Pencil, Play, Trophy } from "lucide-react";
 import { modules, padModule } from "@/data/modules";
+import { db } from "@/lib/db";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  let dbModules: { title: string; category: string }[] = [];
+  try {
+    const result = await db.query(
+      "SELECT title, category FROM pmg_modules WHERE published = true ORDER BY position ASC, created_at ASC",
+    );
+    dbModules = result.rows;
+  } catch {
+    // Static course content remains available until PostgreSQL is configured.
+  }
+  const courseModules = dbModules.length ? dbModules.map(module => [module.title, module.category] as const) : modules;
   return (
     <div className="app-shell">
       <aside className="sidebar">
@@ -12,6 +25,7 @@ export default function Home() {
           <a className="nav-item active" href="#"><BookOpen size={19} /> Learning home</a>
           <a className="nav-item" href="#courses"><Play size={19} /> My courses</a>
           <a className="nav-item" href="#"><Trophy size={19} /> Certificates</a>
+          <Link className="nav-item" href="/admin"><Pencil size={19} /> Admin backend</Link>
         </nav>
         <div className="sidebar-user"><div className="avatar">TC</div><div><strong>Tony Crespo</strong><span>Team member</span></div></div>
       </aside>
@@ -36,16 +50,16 @@ export default function Home() {
         </section>
 
         <section className="stats" aria-label="Learning progress">
-          <div><strong>23</strong><span>Total modules</span></div>
+          <div><strong>{courseModules.length}</strong><span>Total modules</span></div>
           <div><strong>4</strong><span>Completed</span></div>
           <div><strong>17%</strong><span>Course progress</span></div>
           <div className="progress-stat"><span><strong>6h 40m</strong><small>Learning time</small></span><div className="progress-track"><i style={{width: "17%"}} /></div></div>
         </section>
 
         <section className="courses" id="courses">
-          <div className="section-heading"><div><span className="eyebrow">PMG TRAINING ACADEMY</span><h2>Your learning path</h2></div><span>23 modules</span></div>
+          <div className="section-heading"><div><span className="eyebrow">PMG TRAINING ACADEMY</span><h2>Your learning path</h2></div><span>{courseModules.length} modules</span></div>
           <div className="module-grid">
-            {modules.map(([title, category], index) => (
+            {courseModules.map(([title, category], index) => (
               <Link className={`module-card ${index === 0 ? "featured" : ""}`} href={`/modules/${index}`} key={title}>
                 <div className="module-thumb">
                   <span className="module-number">{padModule(index)}</span>
