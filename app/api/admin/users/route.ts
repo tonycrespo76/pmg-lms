@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { readSession } from "@/lib/auth";
+import { sendWelcomeEmail } from "@/lib/smtp2go";
 
 async function requireAdmin() {
   const session = await readSession();
@@ -32,7 +33,23 @@ export async function POST(request: Request) {
   );
   const user = result.rows[0];
   await replaceAssignments(user.id, role === "admin" || Boolean(body.accessAllModules) ? [] : body.moduleIds ?? []);
-  return NextResponse.json({ ...user, moduleIds: role === "admin" || body.accessAllModules ? [] : body.moduleIds ?? [] }, { status: 201 });
+  let welcomeEmailSent = false;
+  let welcomeEmailError: string | undefined;
+  if (role === "learner" && user.active) {
+    try {
+      await sendWelcomeEmail(user.email, user.name);
+      welcomeEmailSent = true;
+    } catch (error) {
+      welcomeEmailError = error instanceof Error ? error.message : "Welcome email could not be sent";
+      console.error("Unable to send PMG Learning welcome email:", welcomeEmailError);
+    }
+  }
+  return NextResponse.json({
+    ...user,
+    moduleIds: role === "admin" || body.accessAllModules ? [] : body.moduleIds ?? [],
+    welcomeEmailSent,
+    ...(welcomeEmailError ? { welcomeEmailError } : {}),
+  }, { status: 201 });
 }
 
 async function replaceAssignments(userId: string, moduleIds: string[]) {

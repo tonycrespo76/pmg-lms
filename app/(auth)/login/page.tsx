@@ -22,6 +22,11 @@ export default function Login() {
     });
     const result = await response.json();
     if (!response.ok) return setMessage(result.error || "Unable to send the code.");
+    if (result.requiresTotp) {
+      setStep("totp");
+      setMessage("Enter the code from your authenticator app.");
+      return;
+    }
     setStep("otp");
     setMessage("Enter the 6-digit code sent to your email.");
   }
@@ -70,9 +75,9 @@ export default function Login() {
           <h2>Sign in to your account</h2>
           {message && <p role="status" className="login-message">{message}</p>}
           {step === "email" && <>
-            <p>Enter your PMG email address. We will send you a one-time sign-in code.</p>
+            <p>Enter your PMG email address to continue to your sign-in method.</p>
             <label>Email address<div className="input-wrap"><Mail size={18} /><input required type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="name@company.com" /></div></label>
-            <button className="primary-button" type="submit">Email me a sign-in code <ArrowRight size={18} /></button>
+            <button className="primary-button" type="submit">Continue <ArrowRight size={18} /></button>
           </>}
           {step === "otp" && <>
             <label>Verification code<div className="input-wrap"><ShieldCheck size={18} /><input required autoFocus inputMode="numeric" pattern="[0-9]{6}" maxLength={6} value={code} onChange={e => setCode(e.target.value.replace(/\D/g, ""))} placeholder="000000" /></div></label>

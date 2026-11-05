@@ -23,7 +23,6 @@
 7. Set `SMTP2GO_SENDER` to a verified sender address in SMTP2Go, including a display name if desired.
 8. Start the app with `npm run dev`.
 
-Email OTP is required for every sign-in. TOTP is optional: users can enable it from their
-profile after signing in. Once enabled, sign-in requires the email OTP followed by the
-authenticator app code. Disabling TOTP returns the account to email OTP-only authentication.
-
+Email OTP is used for accounts without TOTP. TOTP is optional: users can enable it from their
+profile after signing in. Once enabled, sign-in uses the authenticator app code and no email
+OTP is sent. Disabling TOTP returns the account to email OTP authentication.

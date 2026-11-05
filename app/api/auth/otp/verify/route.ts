@@ -23,8 +23,7 @@ export async function POST(request: Request) {
 
   await db.query("UPDATE pmg_email_otps SET consumed_at = NOW() WHERE id = $1", [otpResult.rows[0].id]);
   if (user.totp_secret) {
-    await setSession(user, true);
-    return NextResponse.json({ requiresTotp: true });
+    return NextResponse.json({ error: "This account uses an authenticator app instead of email OTP." }, { status: 400 });
   }
   await setSession(user);
   return NextResponse.json({ requiresTotp: false, authenticated: true });
