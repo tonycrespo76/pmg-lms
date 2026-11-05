@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Clover Restaurant Solutions
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: Clover Restaurant Solutions.
+
+SCENE 1
+Clover offers different station, handheld, and mobile configurations. Features depend on software plan, app availability, device model, and processor settings.
+
+SCENE 2
+Ask about table service, split checks, online ordering, tips, kitchen printing, and back-office reporting. Demonstrate only functions confirmed for the proposed system.
+
+SCENE 3
+A feature may require a paid app, compatible printer, internet connection, or specific device. Never claim an integration works until it has been checked.
+
+SCENE 4
+Practice taking an order, accepting payment, issuing a receipt, reviewing totals, and finding the support path. Use a test account or approved demo environment.
+
+REVIEW
+Knowledge check. Can a Clover feature be promised without checking the plan?. Answer: No.

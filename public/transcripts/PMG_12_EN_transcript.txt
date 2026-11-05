@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+POS Systems Versus Terminals
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: POS Systems Versus Terminals.
+
+SCENE 1
+A payment terminal focuses on accepting and processing payments. Features vary by model, connection method, software, and provider setup.
+
+SCENE 2
+A point-of-sale system may combine payments with products, orders, employee permissions, reporting, receipts, and optional business software.
+
+SCENE 3
+A simple mobile merchant may need a compact payment solution. A busy restaurant may need tables, kitchen routing, multiple printers, and detailed employee permissions.
+
+SCENE 4
+Confirm networking, hardware compatibility, payment integrations, subscriptions, and support coverage before promising a feature.
+
+REVIEW
+Knowledge check. Does every terminal provide full restaurant management?. Answer: No.

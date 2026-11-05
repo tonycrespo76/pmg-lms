@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+How a Card Transaction Works
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: How a Card Transaction Works.
+
+SCENE 1
+A customer taps, inserts, swipes, or enters card information. The terminal or checkout system captures the transaction details securely and sends a request for authorization.
+
+SCENE 2
+The request passes from the merchant’s payment system through its processor or acquirer, then the card network, and finally to the issuing bank. The issuer returns an approval or decline response.
+
+SCENE 3
+An approved sale is not the same as a bank deposit. The transactions also go through clearing and settlement, when records are reconciled and funds move between financial institutions.
+
+SCENE 4
+The merchant’s deposit timing depends on its processing agreement, cutoff times, bank holidays, risk reviews, and other factors. If a deposit is missing, check the batch, settlement status, and reporting before escalating.
+
+REVIEW
+Knowledge check. Does approval mean the merchant has been paid?. Answer: No. Settlement and funding follow.

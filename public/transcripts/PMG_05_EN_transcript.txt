@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Reading a Merchant Statement
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: Reading a Merchant Statement.
+
+SCENE 1
+Confirm the statement period, merchant location, card sales volume, number of transactions, refunds, chargebacks, and total processing-related charges.
+
+SCENE 2
+Divide the relevant total processing fees by card sales volume, then multiply by one hundred. This is an overview, not a substitute for understanding every fee.
+
+SCENE 3
+Look for monthly platform charges, equipment rental, gateway services, batch fees, chargeback fees, and minimums. Some charges do not change just because processing volume changes.
+
+SCENE 4
+Use matching months, include proposed fixed fees, identify any equipment and contract costs, and get approval before stating savings. Never request full card numbers or sensitive customer data.
+
+REVIEW
+Knowledge check. What is the starting point for effective rate?. Answer: Processing fees divided by card sales volume.

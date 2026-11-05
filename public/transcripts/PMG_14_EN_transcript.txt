@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Dejavoo Terminal Basics
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: Dejavoo Terminal Basics.
+
+SCENE 1
+Record the terminal model, customer-facing device if present, application, connection type, and processor configuration. A procedure for one unit may not work on another.
+
+SCENE 2
+Using a test environment, practice sale, approved response, receipt, void, and refund. Confirm available features with the merchant account and provider.
+
+SCENE 3
+Check power, cables, network, terminal status, and the exact error message. Verify parameters and processor enrollment through approved support procedures.
+
+SCENE 4
+Record model, software version if visible, symptoms, troubleshooting performed, and a safe screenshot without cardholder data. Then contact the authorized support team.
+
+REVIEW
+Knowledge check. What device detail should you confirm first?. Answer: The exact terminal model.

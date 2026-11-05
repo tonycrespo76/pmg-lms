@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Batches, Deposits and Reconciliation
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: Batches, Deposits and Reconciliation.
+
+SCENE 1
+A batch groups transactions for processing or settlement, depending on the platform. Automatic and manual cutoff behaviors differ, so check the merchant’s actual setup.
+
+SCENE 2
+Use transaction history, batch reports, settlement reports, and the merchant’s bank records. The sale date, batch date, and bank posting date may differ.
+
+SCENE 3
+Start with gross card sales, then account for refunds, reversals, chargebacks, fees when deducted from funding, and timing differences.
+
+SCENE 4
+Confirm which transactions are affected, account status, batch totals, and processor reference numbers. Do not guarantee a funding date without confirmation.
+
+REVIEW
+Knowledge check. Are transaction and bank posting dates always identical?. Answer: No.

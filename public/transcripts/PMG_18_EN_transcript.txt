@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Declines and Terminal Troubleshooting
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: Declines and Terminal Troubleshooting.
+
+SCENE 1
+A decline can come from an issuer decision or a payment system issue. A frozen screen, offline terminal, or failed connection requires a different troubleshooting path.
+
+SCENE 2
+Confirm power, network, correct merchant location, device status, and visible error messages. Never ask the customer to read their full card number aloud.
+
+SCENE 3
+Before repeating a questionable payment, inspect transaction history or obtain processor guidance. A timeout may not mean the authorization failed.
+
+SCENE 4
+Provide model, exact error, connectivity status, time, amount if relevant, and steps attempted. Never include sensitive authentication data in a support ticket.
+
+REVIEW
+Knowledge check. Should you immediately retry after a timeout?. Answer: Not until you check for a possible prior approval.

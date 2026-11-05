@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Refunds, Voids and Disputes
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: Refunds, Voids and Disputes.
+
+SCENE 1
+A void typically cancels an eligible transaction before settlement. A refund returns money through a later transaction. A chargeback is a dispute handled through the card ecosystem.
+
+SCENE 2
+Eligible actions, time limits, and permissions depend on the processor and POS. Verify the original transaction, amount, and merchant authorization before acting.
+
+SCENE 3
+Record the reason code, response deadline, transaction documentation, and delivery or service evidence when relevant. The acquiring partner provides the actual response process.
+
+SCENE 4
+Explain that a well-documented response can help but does not guarantee a favorable outcome. Avoid sharing customer data in unauthorized systems.
+
+REVIEW
+Knowledge check. Is a refund the same as a chargeback?. Answer: No.

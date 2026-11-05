@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+PCI Data Security Basics
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: PCI Data Security Basics.
+
+SCENE 1
+Use approved devices, encrypted channels, unique employee access, and secure payment workflows. Limit access to people who genuinely need it.
+
+SCENE 2
+PCI DSS prohibits retaining sensitive authentication data such as card verification codes and PIN data after authorization, even if encrypted. Do not keep these in notes or screenshots.
+
+SCENE 3
+Never ask for an employee password, full card number, PIN, or verification code to diagnose a problem. Follow approved identity verification and secure escalation procedures.
+
+SCENE 4
+If payment data may have been exposed, stop the unsafe activity and notify authorized security or processor contacts according to the incident response procedure.
+
+REVIEW
+Knowledge check. May a merchant save card security codes after authorization?. Answer: No.

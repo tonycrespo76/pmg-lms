@@ -1,0 +1,20 @@
+PARTNERS MERCHANT GROUP TRAINING ACADEMY
+Merchant Onboarding and Activation
+
+INTRO
+Welcome to Partners Merchant Group Training Academy. Today: Merchant Onboarding and Activation.
+
+SCENE 1
+Confirm approved account status, legal business details, contacts, pricing acceptance, selected equipment, delivery address, and software requirements.
+
+SCENE 2
+Prepare items, taxes, printers, tips, employees, access levels, and integrations as appropriate. Ask the merchant to approve configuration details.
+
+SCENE 3
+Use the approved test method to verify the payment flow, receipts, batching, reporting, and any restaurant routing. Do not run live transactions casually to test.
+
+SCENE 4
+Identify the primary contact, emergency support number, training completion, unresolved issues, and the first follow-up date.
+
+REVIEW
+Knowledge check. When is the installation complete?. Answer: After verified operation and merchant handoff.
