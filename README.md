@@ -114,6 +114,44 @@ npm run build
 npm run start
 ```
 
+## Generate lesson audio with VoiceStudio
+
+VoiceStudio must be running locally on port `3900`, with a VoiceStudio voice
+profile named **The Teacher**. Generate the English and Spanish lesson audio:
+
+```bash
+npm run voice:generate
+```
+
+Optional environment variables:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `VOICESTUDIO_URL` | `http://127.0.0.1:3900` | VoiceStudio API URL |
+| `VOICESTUDIO_API_KEY` | none | Optional API credential for remote VoiceStudio access |
+| `VOICESTUDIO_VOICE` | `The Teacher` | Voice profile name or voice ID |
+| `VOICESTUDIO_MODEL` | `omnivoice` | VoiceStudio TTS model |
+
+For local loopback access, leave `VOICESTUDIO_API_KEY` empty. VoiceStudio does
+not require authentication on `127.0.0.1:3900`.
+
+For a remote VoiceStudio deployment, generate a shared secret:
+
+```bash
+openssl rand -hex 32
+```
+
+Set the generated value as `OMNIVOICE_API_KEY` in the VoiceStudio environment,
+then set the same value as `VOICESTUDIO_API_KEY` in this project's
+`.env.local`. Never commit either secret.
+
+The generator validates the configured voice before creating files. To test a
+single lesson:
+
+```bash
+npm run voice:generate -- --module 1 --language en
+```
+
 ## Main routes
 
 | Route | Access | Purpose |
