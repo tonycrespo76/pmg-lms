@@ -11,7 +11,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
     }
 
-    const result = await db.query("SELECT id FROM pmg_users WHERE email = $1 LIMIT 1", [email]);
+    const result = await db.query("SELECT id FROM pmg_users WHERE email = $1 AND active = true LIMIT 1", [email]);
     if (!result.rows.length) return NextResponse.json({ error: "No account exists for this email address." }, { status: 404 });
 
     const user = result.rows[0];

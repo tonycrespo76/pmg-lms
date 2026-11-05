@@ -3,16 +3,19 @@ import Image from "next/image";
 import { ArrowRight, BookOpen, Clock3, Headphones, Pencil, Play, Trophy } from "lucide-react";
 import { modules, padModule } from "@/data/modules";
 import { db } from "@/lib/db";
+import { readSession } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
   let dbModules: { title: string; category: string }[] = [];
   try {
-    const result = await db.query(
-      "SELECT title, category FROM pmg_modules WHERE published = true ORDER BY position ASC, created_at ASC",
-    );
-    dbModules = result.rows;
+    const session = await readSession();
+    const user = session?.sub ? (await db.query("SELECT access_all_modules FROM pmg_users WHERE id=$1 AND active=true", [session.sub])).rows[0] : null;
+    const assigned = session?.sub && !user?.access_all_modules
+      ? (await db.query("SELECT m.title, m.category FROM pmg_modules m JOIN pmg_user_modules um ON um.module_id=m.id WHERE um.user_id=$1 AND m.published=true ORDER BY m.position ASC", [session.sub])).rows
+      : (await db.query("SELECT title, category FROM pmg_modules WHERE published = true ORDER BY position ASC, created_at ASC")).rows;
+    dbModules = assigned;
   } catch {
     // Static course content remains available until PostgreSQL is configured.
   }

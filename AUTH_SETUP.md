@@ -24,3 +24,5 @@
 8. Start the app with `npm run dev`.
 
 The first successful sign-in sets up TOTP. Later sign-ins require the email OTP followed by the authenticator app code.
+
+

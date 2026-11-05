@@ -1,0 +1,9 @@
+ALTER TABLE pmg_users ADD COLUMN IF NOT EXISTS active BOOLEAN NOT NULL DEFAULT true;
+ALTER TABLE pmg_users ADD COLUMN IF NOT EXISTS access_all_modules BOOLEAN NOT NULL DEFAULT true;
+
+CREATE TABLE IF NOT EXISTS pmg_user_modules (
+  user_id UUID NOT NULL REFERENCES pmg_users(id) ON DELETE CASCADE,
+  module_id UUID NOT NULL REFERENCES pmg_modules(id) ON DELETE CASCADE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (user_id, module_id)
+);

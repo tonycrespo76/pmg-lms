@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   const code = String(rawCode ?? "").trim();
   if (!/^\d{6}$/.test(code)) return NextResponse.json({ error: "Enter the 6-digit code." }, { status: 400 });
 
-  const userResult = await db.query("SELECT * FROM pmg_users WHERE email = $1 LIMIT 1", [email]);
+  const userResult = await db.query("SELECT * FROM pmg_users WHERE email = $1 AND active = true LIMIT 1", [email]);
   if (!userResult.rows.length) return NextResponse.json({ error: "Account not found." }, { status: 404 });
   const user = userResult.rows[0];
 
