@@ -22,6 +22,10 @@ export async function POST(request: Request) {
   }
 
   await db.query("UPDATE pmg_email_otps SET consumed_at = NOW() WHERE id = $1", [otpResult.rows[0].id]);
-  await setSession(user, true);
-  return NextResponse.json({ requiresTotp: Boolean(user.totp_secret), setupTotp: !user.totp_secret });
+  if (user.totp_secret) {
+    await setSession(user, true);
+    return NextResponse.json({ requiresTotp: true });
+  }
+  await setSession(user);
+  return NextResponse.json({ requiresTotp: false, authenticated: true });
 }

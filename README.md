@@ -2,14 +2,14 @@
 
 PMG Learning is a Next.js training and learning management application for Partners Merchant Group.
 
-It includes learner dashboards, training modules and audio lessons, email OTP authentication, authenticator-app two-factor authentication, PostgreSQL-backed data, and an admin module manager.
+It includes learner dashboards, training modules and audio lessons, required email OTP authentication, optional authenticator-app two-factor authentication, PostgreSQL-backed data, and an admin module manager.
 
 ## Features
 
 - Responsive learner dashboard and training course catalog
 - 23 PMG training modules with existing transcripts and audio
 - Secure sign-in with SMTP2Go-delivered email OTP codes
-- TOTP enrollment and verification with an authenticator app
+- Optional TOTP enrollment and verification with an authenticator app
 - PostgreSQL-backed users, OTP codes, and learning modules
 - Admin interface for creating, editing, publishing, and deleting modules
 - Protected learner and administrator routes
@@ -100,8 +100,9 @@ Administrators can access `/admin`. Learner accounts should use the `learner` ro
 1. User enters an email address registered in `pmg_users`.
 2. The app creates a hashed six-digit OTP and sends it through SMTP2Go.
 3. The user submits the OTP.
-4. On first login, the user scans a QR code in an authenticator app.
-5. Future logins require the email OTP followed by the current authenticator code.
+4. Email OTP is always required.
+5. Users who enable TOTP on their profile enter an authenticator code after the email OTP.
+6. TOTP setup is optional and can be enabled or disabled from `/profile`.
 
 Email OTP codes expire after 10 minutes and are invalidated after use or replacement.
 

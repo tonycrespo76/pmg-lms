@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen, Clock3, Headphones, Pencil, Play, Trophy } from "lucide-react";
+import { ArrowRight, BookOpen, Clock3, Headphones, Pencil, Play, Trophy, UserCircle } from "lucide-react";
 import { modules, padModule } from "@/data/modules";
 import { db } from "@/lib/db";
 import { readSession } from "@/lib/auth";
@@ -29,6 +29,7 @@ export default async function Home() {
           <a className="nav-item" href="#courses"><Play size={19} /> My courses</a>
           <a className="nav-item" href="#"><Trophy size={19} /> Certificates</a>
           <Link className="nav-item" href="/admin"><Pencil size={19} /> Admin backend</Link>
+          <Link className="nav-item" href="/profile"><UserCircle size={19} /> Profile</Link>
         </nav>
         <div className="sidebar-user"><div className="avatar">TC</div><div><strong>Tony Crespo</strong><span>Team member</span></div></div>
       </aside>
